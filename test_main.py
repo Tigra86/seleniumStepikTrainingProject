@@ -10,7 +10,7 @@ driver.get('https://google.com')
 time.sleep(5)
 
 driver.get('https://facebook.com')
-time.sleep(6)
+time.sleep(5)
 
 driver.back()
 time.sleep(5)
