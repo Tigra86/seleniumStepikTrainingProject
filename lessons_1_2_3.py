@@ -9,7 +9,7 @@ driver = webdriver.Chrome(service=service)
 driver.get('https://google.com')
 time.sleep(5)
 
-driver.get('https://facebook.com')
+driver.get('https://instagram.com')
 time.sleep(5)
 
 driver.back()
