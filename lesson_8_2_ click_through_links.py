@@ -17,8 +17,15 @@ driver = webdriver.Chrome(service=service)
 
 driver.get('https://the-internet.herokuapp.com/status_codes')
 links = driver.find_elements('xpath', '//li//a')
+URLS = ['https://the-internet.herokuapp.com/status_codes/200',
+        'https://the-internet.herokuapp.com/status_codes/301',
+        'https://the-internet.herokuapp.com/status_codes/404',
+        'https://the-internet.herokuapp.com/status_codes/500'
+        ]
 
 for link in links:
     link.click()
+    for i in URLS:
+        assert driver.current_url in URLS
     time.sleep(2)
     driver.back()
