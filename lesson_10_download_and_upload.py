@@ -15,7 +15,7 @@ from selenium.webdriver.chrome.service import Service
 
 chrome_options = webdriver.ChromeOptions()
 prefs = {
-    "download.default_directory": os.getcwd() + "/images"
+    "download.default_directory": os.getcwd() + "/downloads"
 }
 chrome_options.add_experimental_option("prefs", prefs)
 
@@ -36,5 +36,5 @@ browser.get("https://demoqa.com/upload-download")
 # Find the Choose File button and upload a file
 upload_btn = browser.find_element("xpath", "//input[@type='file']")
 
-upload_btn.send_keys(f"{os.getcwd()}/images/code.png")
+upload_btn.send_keys(f"{os.getcwd()}/downloads/code.png")
 time.sleep(5)
