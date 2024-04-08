@@ -7,7 +7,6 @@
 '''
 
 import os
-import time
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -37,4 +36,3 @@ browser.get("https://demoqa.com/upload-download")
 upload_btn = browser.find_element("xpath", "//input[@type='file']")
 
 upload_btn.send_keys(f"{os.getcwd()}/downloads/code.png")
-time.sleep(5)
