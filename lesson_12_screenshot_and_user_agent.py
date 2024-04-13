@@ -24,6 +24,8 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 
 wait = WebDriverWait(driver, 30, poll_frequency=1)
 
-driver.get("https://vk.com")
 
-driver.save_screenshot(f"{os.getcwd()}/screenshots/screen.png")
+def test_screenshot():
+    driver.get("https://vk.com")
+
+    driver.save_screenshot(f"{os.getcwd()}/screenshots/screen.png")
