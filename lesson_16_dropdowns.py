@@ -116,3 +116,18 @@ def test_dropdowns_new_style():
                 return element  # Возвращаем нужный элемент из dropdown по тексту
 
     choose_dropwdown_element_by_text("Another root option").click()  # Кликаем на выбранный элемент
+
+
+def test_dropdowns_multiselect():
+    driver.get("https://demoqa.com/select-menu")
+
+    # Through TAB key
+    MULTISELECT = ("xpath", "//input[@id='react-select-4-input']")
+    driver.find_element(*MULTISELECT).send_keys("Gre")
+    assert driver.find_element(*MULTISELECT).get_attribute("value") == "Gre", "Текст не введен"
+    driver.find_element(*MULTISELECT).send_keys(Keys.TAB)
+
+    # Through ENTER key
+    driver.find_element(*MULTISELECT).send_keys("Bla")
+    assert driver.find_element(*MULTISELECT).get_attribute("value") == "Bla", "Текст не введен"
+    driver.find_element(*MULTISELECT).send_keys(Keys.ENTER)
