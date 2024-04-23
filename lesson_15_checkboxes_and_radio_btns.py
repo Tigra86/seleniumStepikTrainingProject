@@ -5,10 +5,6 @@
 3. Убедиться, что они выбраны
 4. Кликнуть еще раз и убедиться, что теперь они не выбраны
 """
-import os
-import time
-import pickle
-
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service

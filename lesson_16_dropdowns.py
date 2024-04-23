@@ -1,6 +1,4 @@
-import os
 import time
-import pickle
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
